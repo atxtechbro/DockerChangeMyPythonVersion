@@ -24,34 +24,25 @@ af4b99ad9ef0: Waiting
 39db0bc48c26: Waiting 
 acb4a89489fc: Waiting 
 ```
-Interestingly this Python2 is a larger file than any of the Python3 images.
-Watch as it will start itself a Python2.7 session right away:
+Interestingly this image 'python:2.7' larger file than any of the Python3 images. It can take about a miute or so to download so be patient. When it finishes it will start a python session automatically so there is no further action necessary from the developer at this stage. Since we did not specify a micro version in the major.minor.micro python versioning paradign, Docker defaults to providing us with the most recent version of the image available, which happens to be 2.7.18. Taken to the extreme, this means we could simply type in 
+
+```$ docker run -it --rm python``` This command would initiate an installation of the latest python released to the public (not as new as the rc version installed in the first command above), OR, if we already have the image, it would instantly start a Python session in that Python Version, whatever it may be. 
+
+The downloading of the image is actually a side effect it falls back to if it fails to start the image, as seen here:
+
+```Unable to find image 'python:2.7' locally```
+
+Enjoy the stability and replication benefits with your specific python session now
+
 ```
 2.7: Pulling from library/python
 7e2b2a5af8f6: Pull complete 
-09b6f03ffac4: Pull complete 
-dc3f0c679f0f: Pull complete 
-fd4b47407fc3: Pull complete 
-b32f6bf7d96d: Pull complete 
-6f4489a7e4cf: Pull complete 
-af4b99ad9ef0: Pull complete 
-39db0bc48c26: Pull complete 
+...
+...
 acb4a89489fc: Pull complete 
 Digest: sha256:cfa62318c459b1fde9e0841c619906d15ada5910d625176e24bf692cf8a2601d
 Status: Downloaded newer image for python:2.7
 Python 2.7.18 (default, Apr 20 2020, 19:27:10) 
 [GCC 8.3.0] on linux2
 Type "help", "copyright", "credits" or "license" for more information.
-```
-
-
-```$ docker run -it --rm python:rc```
-
-```$ docker images python```
-
-```
-REPOSITORY   TAG               IMAGE ID       CREATED         SIZE
-python       rc                6541016e3458   6 days ago      889MB
-python       3.7.9             65d5b6c539fd   6 months ago    877MB
-python       2.7               68e7be49c28c   16 months ago   902MB
 ```
