@@ -3,13 +3,13 @@
 
 If we do not have a python image installed on Docker we can do so very easily without risking other techniques like manipulating the system $PATH which can have unintended side effects down the road. In comparison, using Docker to switch between versions of Python is easy as it should be in Python, and in my opinion is the obvious way to do it. This method involves a simple one-line terminal command. D
 
-```$ docker run -it --rm python*:<major>.<minor>.<micro>*```
+```$ docker run -it python*:<major>.<minor>.<micro>*```
 
 Docker will start a Python session in the specified version immediately, but if we don't have it, Docker will recognize this and download the image for us which could take about a minute.
 
 Let's say I want to code in Python 3.7.9 because a coding challenge issued by a prospective employer contained documentation instructions specified as being current as of Python 3.7.9 - in this case 'downgrading' is something I actually want to do, albeit temporarily, and I will do this by simply typing in - >
 
-```$ docker run -it --rm python:2.7.9```
+```$ docker run -it python:2.7.9```
 
 ```
 Python 3.7.9 (default, Feb  9 2021, 08:33:04) 
@@ -20,7 +20,7 @@ Type "help", "copyright", "credits" or "license" for more information.
 Perfect. I had that installed already and it was trivially easy. What if I need to go all the way back to Python 2.7 but I have never downloaded Python 2 because I learned Python after Python 3 came out?
 
 
-```$ docker run -it --rm python:2.7```
+```$ docker run -it python:2.7```
 
 ```
 Unable to find image 'python:2.7' locally
