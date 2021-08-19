@@ -61,17 +61,13 @@ Python 3.10.0rc1 (default, Aug  3 2021, 19:28:36) [GCC 8.3.0] on linux
 Type "help", "copyright", "credits" or "license" for more information.
 ```
 
-```
-zipper = zip(['with', 'we', 'version'], ['docker', 'redefine', 'control', 'a straggler appeared'], strict = False)
-list(zipper)
-```
+```zipper = zip(['with', 'we', 'version'], ['docker', 'redefine', 'control', 'a straggler appeared'], strict = False)
+list(zipper)```
 
 ```[('with', 'docker'), ('we', 'redefine'), ('version', 'control')]```
 
-```
-zipper = zip(['with', 'we', 'version'], ['docker', 'redefine', 'control', 'a straggler appeared'], strict = True)
-list(zipper)
-```
+```zipper = zip(['with', 'we', 'version'], ['docker', 'redefine', 'control', 'a straggler appeared'], strict = True)
+list(zipper)```
 
 ```ValueError: zip() argument 2 is longer than argument 1```
 
