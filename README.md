@@ -50,7 +50,8 @@ Digest: sha256:cfa62318c459b1fde9e0841c619906d15ada5910d625176e24bf692cf8a2601d
 Status: Downloaded newer image for python:2.7
 Python 2.7.18 (default, Apr 20 2020, 19:27:10) 
 [GCC 8.3.0] on linux2
-Type "help", "copyright", "credits" or "license" for more information.```
+Type "help", "copyright", "credits" or "license" for more information.
+```
 
 
 Let's imagine a developer just finished reading PEP 618 -- Add Optional Length-Checking To zip
@@ -69,12 +70,11 @@ list(zipper)```
 ```[('with', 'docker'), ('we', 'redefine'), ('version', 'control')]```
 
 ```zipper = zip(['with', 'we', 'version'], ['docker', 'redefine', 'control', 'a straggler appeared'], strict = True)
-list(zipper)```
+list(zipper)
+```
 
 ```ValueError: zip() argument 2 is longer than argument 1```
 
 Enjoy the stability of replicating a perfect copy of a previous version of Python, or even try out the newest Release Candidate (RC) before it is released to the general public. Creating an isolated image separate from the rest of your operating system is the exact type of problem Docker is good at solving, as well as the most secure and low risk.
 
-Your downloaded image is installed and you are now in a Python 2 time machine!
-
-
+You can use Docker & Python release switching as a time machine to the future and past
