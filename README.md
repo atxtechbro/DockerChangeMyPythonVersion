@@ -1,13 +1,17 @@
 # $ docker run -it --rm python:3.2.1
 ## How to use Docker to install and run any Python version including Python 2 up to the newest Release Candidate (RC)
+### Motivation
+Let's imagine the problem facing a Python developer prefering to use Python 3.7.9 in order to replicate a clients' environment, or a student needing to utilize Python 3.6.2 to complete an assignment. These are just two of many scenarios in which 'downgrading' is something the developer actually wants to do, albeit temporarily. 
 
-If we do not have a python image installed on Docker we can do so very easily without risking other techniques like manipulating the system $PATH which can have unintended side effects down the road. In comparison, using Docker to switch between versions of Python is easy as it should be in Python, and in my opinion is the obvious way to do it. This method involves a simple one-line terminal command. D
+There are many ways to do this, most of which entail even more problems than downgrading python might solve, so it is really like trading one problem for another. Many of the orthodox approaches to this problem involve changing the system $PATH, and/lor downloading Gzipped source tarball or XZ compressed source tarballs. Then the next thing you know, valuable time is wasted Googling which tarball to use instead of time spent developing. According to the Zen of Python, There should be one— and preferably only one —obvious way to do it.
+
+In the spirit of that sentiment, the Docker approach provides the simplest and most risk-free solution to the problem. The Python developer does not need to worry about the way it is orchestrated behind the scenes. Essentially, what is happening is Docker is allowing us to invoke an isolated image containing a specific version of Python, and that image is quarantined from the rest of our operating system. Beyond that, the subject of containerization and docker installation are outside the scope of this simple demonstration. Before proceeding further, please understand that it is assumed you should have a Linux operating system with Docker installed already at this point.
 
 ```$ docker run -it python*:<major>.<minor>.<micro>*```
 
 Docker will start a Python session in the specified version immediately, but if we don't have it, Docker will recognize this and download the image for us which could take about a minute.
 
-Let's say I want to code in Python 3.7.9 because a coding challenge issued by a prospective employer contained documentation instructions specified as being current as of Python 3.7.9 - in this case 'downgrading' is something I actually want to do, albeit temporarily, and I will do this by simply typing in - >
+ and I will do this by simply typing in - >
 
 ```$ docker run -it python:2.7.9```
 
