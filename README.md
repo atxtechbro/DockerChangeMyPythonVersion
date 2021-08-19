@@ -24,6 +24,26 @@ af4b99ad9ef0: Waiting
 39db0bc48c26: Waiting 
 acb4a89489fc: Waiting 
 ```
+Interestingly this Python2 is a larger file than any of the Python3 images.
+Watch as it will start itself a Python2.7 session right away:
+```
+2.7: Pulling from library/python
+7e2b2a5af8f6: Pull complete 
+09b6f03ffac4: Pull complete 
+dc3f0c679f0f: Pull complete 
+fd4b47407fc3: Pull complete 
+b32f6bf7d96d: Pull complete 
+6f4489a7e4cf: Pull complete 
+af4b99ad9ef0: Pull complete 
+39db0bc48c26: Pull complete 
+acb4a89489fc: Pull complete 
+Digest: sha256:cfa62318c459b1fde9e0841c619906d15ada5910d625176e24bf692cf8a2601d
+Status: Downloaded newer image for python:2.7
+Python 2.7.18 (default, Apr 20 2020, 19:27:10) 
+[GCC 8.3.0] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+```
+
 
 ```$ docker run -it --rm python:rc```
 
