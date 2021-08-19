@@ -12,10 +12,10 @@ In the spirit of that sentiment, this Docker approach will demonstrate the simpl
 Docker will start a Python session in the specified version immediately, but if we don't have it, Docker will recognize this and download the image for us which could take about a minute.
 
 
-If either *major*, *minor*, or *micro* is not specified, Docker will default to downloading the most recent version available. ie a request to download 2.7 would end up getting 2.7.18 because it is the newest version within the bound the developer has specified. If you just want the newest version of python type *python* without the colon
+If either *major*, *minor*, or *micro* is not specified, Docker will default to downloading the most recent version available within the boundaries the developer has specified. To get the newest version of python type *python* without the colon
 
 
-```$ docker run -it python:2.7.9```
+```$ docker run -it python:3.7.9```
 
 
 ```
