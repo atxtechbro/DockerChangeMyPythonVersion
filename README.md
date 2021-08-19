@@ -17,7 +17,8 @@ Docker will start a Python session in the specified version immediately, but if 
 ```$ docker run -it python:2.7.9```
 
 
-```Python 3.7.9 (default, Feb  9 2021, 08:33:04) 
+```
+Python 3.7.9 (default, Feb  9 2021, 08:33:04) 
 [GCC 8.3.0] on linux
 Type "help", "copyright", "credits" or "license" for more information.
 ```
