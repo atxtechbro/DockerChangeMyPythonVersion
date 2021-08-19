@@ -7,6 +7,7 @@ How to use Docker to install and run any Python version including Python 2 up to
 Python 3.7.9 (default, Feb  9 2021, 08:33:04) 
 [GCC 8.3.0] on linux
 Type "help", "copyright", "credits" or "license" for more information.
+>>> 
 ```
 
 ```$ docker run -it --rm python:2.7```
