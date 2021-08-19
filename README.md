@@ -68,9 +68,7 @@ Type "help", "copyright", "credits" or "license" for more information.
 ```
 
 
-```
-[('with', 'docker'), ('we', 'redefine'), ('version', 'control')]
-```
+```[('with', 'docker'), ('we', 'redefine'), ('version', 'control')]```
 
 
 ```
