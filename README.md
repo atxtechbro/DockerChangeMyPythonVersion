@@ -39,10 +39,12 @@ b32f6bf7d96d: Waiting
 6f4489a7e4cf: Waiting 
 af4b99ad9ef0: Waiting 
 39db0bc48c26: Waiting 
-acb4a89489fc: Waiting```
+acb4a89489fc: Waiting
+```
 
 Since we did not specify a micro version in the major.minor.micro python versioning paradigm introduced in PEP 440, Docker defaults to providing us with the most recent version of the image available, which happens to be 2.7.18
 
+```
 ...acb4a89489fc: Pull complete 
 Digest: sha256:cfa62318c459b1fde9e0841c619906d15ada5910d625176e24bf692cf8a2601d
 Status: Downloaded newer image for python:2.7
