@@ -54,7 +54,7 @@ Let's imagine a developer just finished reading PEP 618 -- Add Optional Length-C
 Wouldn't it be nice to be able to switch back and forth with ease so we can better understand the proposed change? Reading the PEP in it's entirety is great if you're up for it, but running the code in a quick python:rc session and then seeing how it behaves differently is really a cool thing to experience. 
 
 ```
-docker run -it --rm python:rc
+docker run -it python:rc
 Python 3.10.0rc1 (default, Aug  3 2021, 19:28:36) [GCC 8.3.0] on linux
 Type "help", "copyright", "credits" or "license" for more information.
 
