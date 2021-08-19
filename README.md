@@ -11,7 +11,8 @@ In the spirit of that sentiment, this Docker approach will demonstrate the simpl
 
 Docker will start a Python session in the specified version immediately, but if we don't have it, Docker will recognize this and download the image for us which could take about a minute.
 
- and I will do this by simply typing in - >
+
+If either *major*, *minor*, or *micro* is not specified, Docker will default to downloading the most recent version available. ie a request to download 2.7 would end up getting 2.7.18 because it is the newest version within the bound the developer has specified. If you just want the newest version of python type *python* without the colon
 
 
 ```$ docker run -it python:2.7.9```
@@ -27,31 +28,25 @@ Type "help", "copyright", "credits" or "license" for more information.
 Perfect. I had that installed already and it was trivially easy. What if I need to go all the way back to Python 2.7 but I have never downloaded Python 2 because I learned Python after Python 3 came out?
 
 
-```$ docker run -it python:2.7```
+```$ docker run -it python:2.7.18```
 
-```Unable to find image 'python:2.7' locally
-2.7: Pulling from library/python
-7e2b2a5af8f6: Downloading  507.1kB/50.38MB
-09b6f03ffac4: Downloading  1.403MB/7.812MB
-dc3f0c679f0f: Downloading  1.342MB/9.996MB
-fd4b47407fc3: Waiting 
-b32f6bf7d96d: Waiting 
-6f4489a7e4cf: Waiting 
-af4b99ad9ef0: Waiting 
-39db0bc48c26: Waiting 
-acb4a89489fc: Waiting
-```
-
-Since we did not specify a micro version in the major.minor.micro python versioning paradigm introduced in PEP 440, Docker defaults to providing us with the most recent version of the image available, which happens to be 2.7.18
-
-```
-...acb4a89489fc: Pull complete 
+Unable to find image 'python:2.7.18' locally
+2.7.18: Pulling from library/python
+7e2b2a5af8f6: Pull complete 
+09b6f03ffac4: Pull complete 
+dc3f0c679f0f: Pull complete 
+fd4b47407fc3: Pull complete 
+b32f6bf7d96d: Pull complete 
+6f4489a7e4cf: Pull complete 
+af4b99ad9ef0: Pull complete 
+39db0bc48c26: Pull complete 
+acb4a89489fc: Pull complete 
 Digest: sha256:cfa62318c459b1fde9e0841c619906d15ada5910d625176e24bf692cf8a2601d
-Status: Downloaded newer image for python:2.7
+Status: Downloaded newer image for python:2.7.18
 Python 2.7.18 (default, Apr 20 2020, 19:27:10) 
 [GCC 8.3.0] on linux2
 Type "help", "copyright", "credits" or "license" for more information.
-```
+
 
 
 Let's imagine a developer just finished reading PEP 618 -- Add Optional Length-Checking To zip
