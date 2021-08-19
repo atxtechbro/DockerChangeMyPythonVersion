@@ -1,5 +1,5 @@
-#DockerRunPython-x.y.z
-##How to use Docker to install and run any Python version including Python 2 up to the newest Release Candidate (RC)
+# DockerRunPython-x.y.z
+## How to use Docker to install and run any Python version including Python 2 up to the newest Release Candidate (RC)
 
 If we do not have a python image installed on Docker we can do so very easily without risking other techniques like manipulating the system $PATH which can have unintended side effects down the road. In comparison, using Docker to switch between versions of Python is easy as it should be in Python, and in my opinion is the obvious way to do it. This method involves a simple one-line terminal command. D
 
