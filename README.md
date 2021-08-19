@@ -1,4 +1,4 @@
-# $ docker run -it --rm python:3.2.1
+# $ docker run -it python:3.2.1
 ## How to use Docker to install and run any Python version including Python 2 up to the newest Release Candidate (RC)
 ### Motivation
 Let's imagine the problem facing a developer needing to use Python 3.7.9 in order to replicate a clients' environment, or a student needing to utilize Python 2.7.18 to complete an assignment. These are just two of many scenarios in which 'downgrading' is something the developer wants to do, albeit temporarily.
