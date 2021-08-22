@@ -7,7 +7,7 @@ There are many ways to do this, all of which entail additional implementations d
 
 In the spirit of this sentiment, the Docker way will demonstrate the simplest and least costly solution to the version-change problem. It makes it easy to switch from one version to another, and then easily revert back. The developer does not need to worry about the way it is orchestrated behind the scenes. Essentially, what is happening is Docker is allowing the developer to invoke an isolated image containing a specific version of Python, and that image is quarantined from the rest of their operating system. Indeed, this is the exact problem Docker is made for. However, the subject of containerization and even the installation of Docker are outside the scope of this simple demonstration.  Before proceeding further, please understand that it is assumed you should have a Linux operating system with Docker installed already at this point.
 
-```$ docker run -it python*:<major>.<minor>.<micro>*```
+```$ docker run -it python:<major>.<minor>.<micro>*```
 
 Docker will start a Python session in the specified version immediately, but if we don't have it, Docker will recognize this and download the image for us which could take about a minute.
 
